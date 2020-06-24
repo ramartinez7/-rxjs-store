@@ -1,4 +1,4 @@
-import { Status, Action } from ".";
+import { Status } from ".";
 
 export class EntityState<T> {
   entities?: Array<T> = [];
@@ -6,7 +6,7 @@ export class EntityState<T> {
   status?: Status;
   action?: string;
   error?: any;
-  [key: string]: any;
+  //[key: string]: any;
 
   constructor(entities: Array<T> = [], selected?: T) {
       this.entities = entities;

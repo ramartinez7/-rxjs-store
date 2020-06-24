@@ -12,17 +12,3 @@ export enum Status {
   LOADING = 'LOADING',
   COMPLETE = 'COMPLETE'
 }
-
-
-/* Actions */
-
-export enum GenericAction {
-  GET_ALL = 'GET_ALL',
-  GET_BY_ID = 'GET_BY_ID',
-  CREATE = 'CREATE',
-  UPDATE = 'UPDATE',
-  DELETE = 'DELETE',
-  SOFT_DELETE = 'SOFT_DELETE'
-}
-
-export type Action = GenericAction; // | CustomerActions | OrderActions | etc..
