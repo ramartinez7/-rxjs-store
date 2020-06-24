@@ -1,16 +1,17 @@
 {
   "name": "rxjs-reactive-state",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "RxJs powered state management library for Reactive Applications implementing observable store",
   "main": "./lib/index.js",
-  "typings": "./lib/index.d.ts",
+  "types": "./lib/index.d.ts",
   "dependencies": {
     "@types/lodash": "^4.14.156",
     "lodash": "^4.17.15",
-    "rxjs": "^6.5.5",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
     "typescript": "^3.9.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf lib/**/* && tsc",
@@ -32,8 +33,5 @@
   "bugs": {
     "url": "https://github.com/ramartinez7/-rxjs-store/issues"
   },
-  "homepage": "https://github.com/ramartinez7/-rxjs-store#readme",
-  "files": [
-    "lib"
-  ]
+  "homepage": "https://github.com/ramartinez7/-rxjs-store#readme"
 }
