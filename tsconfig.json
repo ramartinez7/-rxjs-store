@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": false
+  },
+  "include": [
+    "src/index.ts"
+  ]
+}
