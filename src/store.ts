@@ -1,8 +1,8 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { cloneDeep } from 'lodash';
 import { map, distinctUntilChanged } from 'rxjs/operators';
-import { customFn } from '.';
-import { isFunction } from './functions';
+import { customFn, ReturnTypes } from '.';
+import { isFunction, isString, compareKeys } from './functions';
 
 export class Store<T> {
     protected state$: BehaviorSubject<T>;
