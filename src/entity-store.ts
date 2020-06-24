@@ -4,7 +4,7 @@ export class EntityState<T> {
   entities?: Array<T> = [];
   selected?: T;
   status?: Status;
-  action?: Action;
+  action?: string;
   error?: any;
   [key: string]: any;
 
@@ -69,7 +69,7 @@ export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
   }
 
   /** By default actions start with status loading */
-  public setAction(action: Action) {
+  public setAction(action: string) {
     const state: S = {
       ...(this.state),
       action,
