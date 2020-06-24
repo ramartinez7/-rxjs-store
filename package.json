@@ -1,17 +1,20 @@
 {
   "name": "rxjs-reactive-state",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "RxJs powered state management library for Reactive Applications implementing observable store",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "dependencies": {
     "@types/lodash": "^4.14.156",
     "lodash": "^4.17.15",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.5.5",
+    "typescript": "^3.9.5"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf lib/**/* && tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

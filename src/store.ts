@@ -106,7 +106,7 @@ export class Store<T> {
                     // acc: accumulator
                     // k: element
                     // response: {[key: keyof T]: state[key]}
-                    return ([...new Set(arg as (keyof T)[])]).reduce(
+                    return ([...(arg as (keyof T)[])]).reduce(
                         (acc, k) => {
                             acc[k as any] = state[k];
                             return acc;
