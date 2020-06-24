@@ -24,14 +24,14 @@ export class Store<T> {
     /**
      * Set the value of the store
      * @example
-     *  this.store.dispatch({ products: products })
+     *  this.store.change({ products: products })
      */
     public change(object: Partial<T>): void;
 
     /**
      * Set the value of the store, using the store's value in a function
      * @example
-     * this.store.dispatch(state => {
+     * this.store.change(state => {
      *   return {...}
      * })
      */
@@ -43,7 +43,7 @@ export class Store<T> {
      * The update(callback) option gives you more control. It receives a callback function, which gets the current state,
      * and returns a new immutable state, which will be the new value of the store.
      */
-    // public dispatch(next: any): void {
+    // public change(next: any): void {
     //     const s = typeof next === 'function' ? next(this.state) : next;
     //     this.state$.next(cloneDeep(s));
     // }
@@ -73,10 +73,10 @@ export class Store<T> {
      *
      * @example
      *
-     * this.query.select()
-     * this.query.select(state => state.entities)
-     * this.query.select('products');
-     * this.query.select(['name', 'email'])
+     * this.store.listen()
+     * this.store.listen(state => state.entities)
+     * this.store.listen('products');
+     * this.store.listen(['name', 'email'])
      */
     listen$<R extends keyof T>(key: R): Observable<T[R]>;
     // Pick<T, K>: Constructs a type by picking the set of properties K from T.
