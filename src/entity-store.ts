@@ -1,4 +1,9 @@
-import { Status } from ".";
+export enum Status {
+  SUCCESS = 'SUCCESS',
+  FAILED = 'FAILED',
+  LOADING = 'LOADING',
+  COMPLETE = 'COMPLETE'
+}
 
 export class EntityState<T> {
   entities?: Array<T> = [];
