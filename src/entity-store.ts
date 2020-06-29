@@ -21,7 +21,6 @@ export class EntityState<T> {
 
 import { Store } from './store';
 import { Observable } from 'rxjs';
-import * as _ from 'lodash';
 
 /**
  * Store for entities

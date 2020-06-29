@@ -1,5 +1,4 @@
 import { BehaviorSubject, Observable } from 'rxjs';
-import { cloneDeep } from 'lodash';
 import { map, distinctUntilChanged } from 'rxjs/operators';
 import { customFn, ReturnTypes } from '.';
 import { isFunction, isString, compareKeys } from './functions';
@@ -60,7 +59,7 @@ export class Store<T> {
             };
         }
 
-        this.state$.next(cloneDeep(state));
+        this.state$.next(state);
 
         if (this.logActions) {
             console.log(this.state);
