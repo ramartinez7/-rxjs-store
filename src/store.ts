@@ -109,7 +109,7 @@ export class Store<T> {
                         (acc, k) => {
                             acc[k as any] = state[k];
                             return acc;
-                        }
+                        }, []
                     );
                 })
             );
