@@ -1,36 +1,36 @@
 {
-  "name": "rxjs-reactive-state",
-  "version": "1.1.5",
-  "description": "RxJs powered state management library for Reactive Applications implementing observable store",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "dependencies": {
-    "@types/lodash": "^4.14.156",
-    "rxjs": "^6.5.5"
-  },
-  "devDependencies": {
-    "typescript": "^3.9.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf lib/**/* && tsc",
-    "prepare": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ramartinez7/-rxjs-store.git"
-  },
-  "keywords": [
-    "rxjs",
-    "observable",
-    "store",
-    "redux",
-    "state management"
-  ],
-  "author": "Ricardo Andrés Martínez Peña",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ramartinez7/-rxjs-store/issues"
-  },
-  "homepage": "https://github.com/ramartinez7/-rxjs-store#readme"
+    "name": "rxjs-reactive-state",
+    "version": "1.2.5",
+    "description": "RxJs powered state management library for Reactive Applications implementing observable store",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "dependencies": {
+        "rxjs": "^6.5.5"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.156",
+        "typescript": "^3.9.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf lib/**/* && tsc",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ramartinez7/-rxjs-store.git"
+    },
+    "keywords": [
+        "rxjs",
+        "observable",
+        "store",
+        "redux",
+        "state management"
+    ],
+    "author": "Ricardo Andrés Martínez Peña",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ramartinez7/-rxjs-store/issues"
+    },
+    "homepage": "https://github.com/ramartinez7/-rxjs-store#readme"
 }
