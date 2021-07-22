@@ -31,7 +31,9 @@ import { Observable } from 'rxjs';
  * T = Entity
  */
 
-export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
+type T<S> = S extends EntityState<(infer R)> ? R : S;
+
+export class EntityStore<S extends EntityState<any>> extends Store<S> {
 
   observer$: Observable<S>;
 
@@ -39,12 +41,12 @@ export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
     super(initialState);
   }
 
-  public add(m: T | T[]) {
+  public add(m: T<S> | T<S>[]) {
     const entities = [...this.state.entities.concat(m)];
     this.dispatchEntities(entities);
   }
 
-  public update(fn: (entity: T) => boolean, entity: T): void {
+  public update(fn: (entity: T<S>) => boolean, entity: T<S>): void {
     const idx = this.state?.entities?.findIndex(fn);
 
     if (idx === -1) {
@@ -58,7 +60,7 @@ export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
     this.dispatchEntities(entities);
   }
 
-  public remove(fn: (entity: T) => boolean): void {
+  public remove(fn: (entity: T<S>) => boolean): void {
     const idx = this.state?.entities?.findIndex(fn);
     if (idx === -1) {
       return;
@@ -68,7 +70,7 @@ export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
     this.dispatchEntities(entities);
   }
 
-  public exists(fn: (entity: T) => boolean): boolean {
+  public exists(fn: (entity: T<S>) => boolean): boolean {
     return this.state?.entities?.some(fn) || false;
   }
 
@@ -90,7 +92,7 @@ export class EntityStore<S extends EntityState<T>, T> extends Store<S> {
     this.change(state);
   }
 
-  private dispatchEntities(entities: T[]) {
+  private dispatchEntities(entities: T<S>[]) {
     this.change({ ...this.state, entities });
   }
 }

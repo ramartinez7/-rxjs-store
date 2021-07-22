@@ -1,6 +1,6 @@
 {
     "name": "rxjs-reactive-state",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "RxJs powered state management library for Reactive Applications implementing observable store",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
